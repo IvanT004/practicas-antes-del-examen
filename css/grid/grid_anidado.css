@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+.contenedor{
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    background-color: #999999;
+    max-width: 513px;
+    max-height: 273px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+
+.items{
+
+    border: 0.5px solid white;
+    padding: 1rem;
+}
+
+.item4{
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-area: 2 /  2 / span 3;
+}
+
+.lista1{
+
+    grid-area: 1 / span 2;
+}
+
+.lista1,.lista2,.lista3,.lista4,.lista5{background-color: #a076a0;}
