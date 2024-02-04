@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="../css/plantilla.css">
+    <script src="javascript/validaCampos(intentoIvan).js"></script>
+
 </head>
+
 <body>
-    
+    <div class="contenedor">
+        <p><label for="">Nombre:</label><input type="text" id="nombre" required><span id="campo1" class="error"></span></p>
+        <p><label for="">Apellidos:</label><input type="text" id="apellidos"><span id="campo2" class="error"></span></p>
+        <p><label for="">Email:</label><input type="text" id="email" required><span id="campo3" class="error"></span></p>
+        <p><label for="">Contraseña:</label><input type="text" id="password" required><span id="campo4" class="error"></span></p>
+        <p><label for="">Confirma la contraseña:</label><input type="text" id="password2" required><span id="campo5" class="error"></span></p>
+        <p><label for="">DNI:</label><input type="text"  id="dni" required><span id="campo6" class="error"></span></p>
+        <p><label for="">Acepta la política de privacidad:</label><input type="checkbox" id="politica" required><span id="campo7" class="error"></span></p>
+        <p><button onclick="comprobar(document.getElementsByTagName('input'))">Enviar</button></p>
+    </div>
 </body>
+
 </html>
