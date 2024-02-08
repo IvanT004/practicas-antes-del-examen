@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="plantilla.css">
+    <script src="valida(IntentoIvan).js"></script>
+    <style>
+        #error{
+            color: red;
+        }
+    </style>
 </head>
 <body>
+    <div class="contenedor">
+        <p><label for="">Nombre:</label><input type="text" id="nombre" required><span class="error" id="campo1"></span></p>
+        <p><label for="">Apellidos:</label><input type="text" id="apellidos"><span class="error" id="campo2"></span></p>
+        <p><label for="">Email:</label><input type="text" id="email" required><span class="error" id="campo3"></span></p>
+        <p><label for="">Password:</label><input type="password" id="password" required><span class="error" id="campo4"></span></p>
+        <p><label for="">Confirme la password:</label><input type="password" id="password2" required><span class="error" id="campo5"></span></p>
+        <p><label for="">DNI:</label><input type="text" id="dni" required><span class="error" id="campo6"></span></p>
+        <p><label for="">Acepta la política de privacidad</label><input type="checkbox" id="politica" required><span class="error" id="campo7"></span></p>
+        <p><button onclick="comprobar(document.getElementsByTagName('input'))">Enviar</button></p>
     
+    </div>
 </body>
 </html>
