@@ -29,6 +29,9 @@
 
                 document.getElementById("mensaje").innerHTML="";
                 localStorage.setItem("nuevo", peso);
+                pesoInicial= JSON.parse(localStorage.getItem("nuevo"));
+                document.getElementById("mensaje").innerHTML= "Tu peso fue guardado";
+                
             }else if(peso == pesoInicial){
 
                 document.getElementById("feedback").innerHTML="Estás igual que antes";
