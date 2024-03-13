@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLE OLE OLE OLE BETI OLE</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+    
+    <p><label for="">Escribe tu nombre:</label><input type="text" name="nombre"><span class="error" id="clase0" ></span></p>
+    <p><label for="">Escribe tu apellido:</label><input type="text" name="apellido"><span class="error" id="clase1" ></span></p>
+    <p><label for="">Escribe dni:</label><input type="text" name="dni"><span class="error" id="clase2" ></span></p>
+    <p><label for="">Escribe contraseña:</label><input type="password" name="contrasena"><span class="error" id="clase3" ></span></p>
+    <p><label for="">Confirma contraseña:</label><input type="password" name="contrasena2"><span class="error" id="clase4" ></span></p>
+    <p><input type="color"   id="" name="color"><span class="error" id="clase5" ></span></p>
+    <p><input type="date" id="" name="fecha"><span class="error" id="clase6" ></span></p>
+    <p><button onclick="enviar(document.getElementsByTagName('input'))">Enviar</button></p>
+    
+    </table>
+
+    <script>
+
+        function enviar(elementos){
+
+            let estanCorrectos = true;
+            for(var i=0;i<elementos.length;i++){
+
+                if(elementos[i].value == '' || elementos[i].checked==false){
+
+                    document.getElementById("clase"+i).innerHTML= "Debes introducir algo en este campo";
+                    
+                }else{
+                    
+                     
+                }
+            }
+           
+        }
+    </script>
+</body>
+</html>

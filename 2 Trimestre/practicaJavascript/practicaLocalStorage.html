@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness 2</title>
+    <link rel="stylesheet" href="../css/practicaLocalStorage.css">
+</head>
+<body>
+    
+    <div class="caja">
+
+        <h1>Mejora tu físico perra</h1> 
+        <img src="../images/1366_2000.jpeg" alt="">
+        <p><label for="">Introduce tu peso: </label><input type="text" id="pesoActual"></p> 
+        <p id="feedback"></p>
+        <p id="mensaje"></p>
+        <button onclick="comprobar(document.getElementById('pesoActual').value)">Enviar</button>    
+    </div>
+
+    <script>
+        function comprobar(peso){
+            
+            var pesoInicial = 200;
+            pesoInicial= JSON.parse(localStorage.getItem("nuevo"));
+            document.getElementById("mensaje").innerHTML= "Tu ultimo peso fue "+ pesoInicial;
+
+            if(pesoInicial==null){
+
+                document.getElementById("mensaje").innerHTML="";
+                localStorage.setItem("nuevo", peso);
+            }else if(peso == pesoInicial){
+
+                document.getElementById("feedback").innerHTML="Estás igual que antes";
+            }else if(peso < pesoInicial){
+
+                document.getElementById("feedback").innerHTML = "Has bajado de peso";
+                localStorage.setItem("nuevo", peso);
+
+            }else if(peso > pesoInicial){
+
+                document.getElementById("feedback").innerHTML = "Has subido de peso. Haz ejercicio puto gordo";
+                localStorage.setItem("nuevo", peso);
+
+            }else{
+
+                document.getElementById("feedback").innerHTML = "Debes introducir un peso";
+            }
+
+        }
+    </script>
+</body>
+</html>
