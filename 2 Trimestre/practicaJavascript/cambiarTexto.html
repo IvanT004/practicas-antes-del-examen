@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CambiarTexto</title>
+</head>
+<body>
+        <p id="parrafo">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean metus ipsum, ultricies vel facilisis ac, condimentum at ligula. 
+            Nunc hendrerit scelerisque finibus. Duis fermentum metus libero, id scelerisque mi convallis id. Suspendisse varius, leo vel blandit finibus,
+            enim leo condimentum diam, varius tincidunt urna dui a erat. Cras ut volutpat neque. In id efficitur leo. Suspendisse a ipsum tempor, rutrum 
+            eros vestibulum, porta sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc gravida quam 
+            vulputate odio elementum, vel pretium tortor elementum. Fusce vel ante eu urna placerat tincidunt. In hac habitasse platea dictumst. Sed a 
+            tortor urna. Etiam purus libero, suscipit nec diam vitae, dictum rhoncus justo. Nunc nec scelerisque justo. Aenean molestie laoreet massa, 
+            at gravida ex. Sed congue eleifend magna vel placerat.
+         </p>
+
+         <table>
+
+            <tr>
+                <td><button onclick="aumentar()">+</button></td>
+                <td><button onclick="disminuir()">-</button></td>
+                <td><select id="fuente">
+
+                    <option value="fuente1">Times New Roman</option>
+                    <option value="fuente2">Arial</option>
+                    <option value="fuente3">Verdana</option>
+                    <option value="fuente4">Helvetica</option>
+                    <option value="fuente5">Monospace</option>
+
+                </select></td>
+                <td><input type="color" name="" id="" onclick="cambiarColor()"></td>
+                <td><button onclick="guardar()">Guardar</button></td>
+            </tr>
+
+        </table>
+
+         <script>
+
+            function aumentar(){
+
+                document.getElementById("parrafo").style.fontSize()=+5;
+            }
+            function disminuir(){
+
+                document.getElementById("parrafo").style.fontSize()=-5;
+            }
+            function cambiarColor(){
+                document.getElementById("parrafo").style.color();
+            }
+
+         </script> 
+         
+
+</body>
+</html>
