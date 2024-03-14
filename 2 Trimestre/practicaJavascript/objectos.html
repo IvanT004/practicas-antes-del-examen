@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+
+    <p id="info"></p>
+
+    <script>
+        
+        var coche={
+
+            marca:"toyota",
+            rueda: "nylon",
+            color: "rojo",
+            combustible:"aceite"
+        }
+
+        document.getElementById("info").innerHTML = coche.marca;
+        localStorage.setItem("datos", JSON.stringify(coche));
+
+    </script>
+</body>
+</html>

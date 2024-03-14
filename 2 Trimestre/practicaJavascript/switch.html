@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    
+    <p>Esta pagina muestra imagenes random a partir de palabras obtenidas de un array</p>
+    <img src="" alt="" id="imagen" width="30%" height="30%">
+    <p id="numero"></p>
+    
+    <script>
+
+        var palabras=["joaquin","jesus_navas","el_bicho"];
+
+        function aleatorio(){
+            var min = Math.ceil(0);
+            var max = Math.floor(4);
+            var resultado = Math.floor(Math.random() * (4 - 0) + 0);
+            document.getElementById("numero").textContent = "El numero random es: " + resultado;
+
+            switch(resultado){
+
+                case 0:
+                
+                document.getElementById("imagen").src="../images/Joaquin_2022_(cropped).jpg";
+                break;
+
+                case 1:
+                document.getElementById("imagen").src="../images/cristiano-ronaldo-al-nassr-2023-1692731063-114594.jpg";
+                break;
+
+                case 2:
+                document.getElementById("imagen").src="../images/europapress-5502174-jesus-navas-spain-gestures-during-uefa-euro-2024-european-qualifier-match-spain_21234580_20231013192656.jpg"
+                break;
+
+                default:
+
+                alert("jose carlos es gilipollas");
+                break;
+            }
+        }
+
+        window.onload=aleatorio();
+    </script>
+</body>
+</html>
