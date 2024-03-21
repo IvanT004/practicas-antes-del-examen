@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+    <script>
+
+        function validar(){
+
+            var cifras = document.getElementById("ingresado").value;
+            var ArrayCadenas= cifras.split(",");
+            
+            for(var i=0; i<ArrayCadenas.length; i++){
+
+                var Digitos= ArrayCadenas[0];
+
+                if(isNaN(Digitos)){
+                    
+                    return alert("Por favor, ingrese sólo carácteres numéricos.");
+
+                }else{
+
+                    return sumar(ArrayCadenas);
+                }
+
+            }
+            
+        }
+
+        function sumar(numeros){
+
+            var total = 0;
+
+            for(var i=0; i<numeros.length; i++){
+            total += parseFloat(numeros[i]);
+            }
+            return alert("La distancia total es de "+ total);
+        }
+    </script>
+
+    <h1>Calculadora de distancia</h1>
+    <input type="text" id="ingresado">
+    <button onclick="validar()">Calcula</button>
+
+</body>
+</html>
