@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body onload="cargar()">
+    
+    <script>
+
+        function cargar(){
+        
+        var coche={
+
+            combustible: "gasolina",
+            marca: "audi",
+            color: "rojo"
+
+        }
+
+        localStorage.setItem("nuevo", JSON.stringify(coche));
+        var obtenido = localStorage.getItem("nuevo");
+        document.getElementById("mostrar").innerHTML=obtenido;
+        
+    }
+    </script>
+
+    <p id="mostrar"></p>
+
+</body>
+</html>
